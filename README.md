@@ -65,7 +65,7 @@ if p_value < 0.01:
 ## Kind of tests used.
 In the dataset we have a set of features. Since we're only analyzing if there are signs of Data Drift, we don't need the values for the target T (the ground truth).
 
-We will need first to identify a set of features that we want to consider in our test. For example, after we have validated our model, we do a "Feature Importance" Analysis. Themìn, we can decide to consider, let's say, the first 10 most important features.
+We will need first to identify a set of features that we want to consider in our test. For example, after we have validated our model, we do a "Feature Importance" Analysis. Then, we can decide to consider, let's say, the first 10 most important features.
 
 We have then to make a difference between the **categorical features** and the **numerical (continuous)** features.
 
