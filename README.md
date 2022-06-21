@@ -62,7 +62,7 @@ We have then to make a difference between the **categorical features** and the *
 For the **categorical features** we will compute, for each of the distinct values the occurrencies and the frequencies.
 Then, on top of this values, we can use a **Chi2 Test**.
 
-For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And, we will also compute the **Wasserman** distance.
+For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And, we will also compute the **Wasserstain** distance.
 
 The supporting functions can be taken from **scipy** library.
 
