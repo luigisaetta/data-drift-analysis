@@ -27,7 +27,9 @@ And, this could be the main reason why the accuracy of your model is worse.
 In this repository I have collected some Python tools that can be used to rapidly (well, depends on the dataset size, of course) identify if there are signals of Data Drift.
 
 ## Dynamical Models.
-A ML model shouldn't be considered a static thing. From time to time, you should consider to option to re-train it on fresh data, in order to take into account the fact that data can change in time.
+A ML model shouldn't be considered a static thing. 
+
+From time to time, you should consider to option to re-train it on fresh data, in order to take into account the fact that data can change in time.
 
 To diagnose a Model Drift is more complicated, because you need the expected values (the ground truth) to test your predictions. But, at least, you can periodically check to see if there are signs of Data Drift.
 
@@ -53,9 +55,12 @@ Thresholds? It is always difficult to give values that can be used in any case. 
 
 But, often, the value 0.01 is used.
 
-Therefore, a quick recipe could be:
+Therefore, a **quick recipe** could be:
 
-if p_value < 0.01: "there is a drift"
+```
+if p_value < 0.01: 
+   print("there is a drift")
+```
 
 ## Kind of tests used.
 In the dataset we have a set of features. Since we're only analyzing if there are signs of Data Drift, we don't need the values for the target T (the ground truth).
