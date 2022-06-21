@@ -86,6 +86,11 @@ What are changing are the Statistical characteristics of some key features (or e
 ## Conda environment.
 [Here](https://github.com/luigisaetta/data-drift-analysis/wiki/CONDA-Environments) you can find a list of the CONDA environments on which I have tested the code.
 
+## JOBS and Data Drift Analysis in batch mode.
+The code I have posted in this repository can be used inside a Data Science JOB to do the analysis in batch mode and, therefore, can be included as part of a pipeline.
+
+You will find more details [here](https://github.com/luigisaetta/data-drift-analysis/wiki/JOBS-for-Data-Drift-Analysis)
+
 ## The Wiki.
 In the Wiki you can find some more details regarding the implementation.
 
