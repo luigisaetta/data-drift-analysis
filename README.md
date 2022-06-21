@@ -26,6 +26,11 @@ And, this could be the main reason why the accuracy of your model is worse.
 
 In this repository I have collected some Python tools that can be used to rapidly (well, depends on the dataset size, of course) identify if there are signals of Data Drift.
 
+## Dynamical Models.
+A ML model shouldn't be considered a static thing. From time to time, you should consider to option to re-train it on fresh data, in order to take into account the fact that data can change in time.
+
+To diagnose a Model Drift is more complicated, because you need the expected values (the ground truth) to test your predictions. But, at least, you can periodically check to see if there are signs of Data Drift.
+
 ## Hypothesis Test.
 We want to formalize the kind of test we're doing.
 
@@ -66,7 +71,7 @@ For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And
 
 The supporting functions can be taken from **scipy** library.
 
-## It is not shema drift.
+## It is not schema drift.
 We're assuming here that the "schema" is the same for the two datasets.
 
 What are changing are the Statistical characteristics of some key features (or example, the mean has increased significantly).
