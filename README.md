@@ -34,7 +34,7 @@ We will call it a reference dataset.
 
 You should always keep a good reference dataset.
 
-Then, you have a second dataset. Maybe it is a new dataset, with data collected recently. And, we want to identify if there has been a Data Drift moving from the reference dataset to the new one.
+Then, we have a second dataset. Maybe it is a new dataset, with data collected recently. And, we want to identify if there has been a Data Drift moving from the reference dataset to the new one.
 
 At this point we make an Hypothesis. It is what is called the **"Null Hypotesis"**. Often identified with H0.
 
@@ -44,7 +44,7 @@ We want, in some way, compute the probability of having the second dataset (bett
 
 If this probability (p_value) is too low, we can say that there is a strong signal of Data Drift.
 
-Thresholds? Well, it is always difficult to give values that can be used in any case. It depends on the size of the dataset. On the amount of "noise". It depends also on the "sensibility" that you want to give to your diagnostic tool.
+Thresholds? It is always difficult to give values that can be used in any case. It depends on the size of the dataset. On the amount of "noise". It depends also on the "sensibility" that you want to give to your diagnostic tool.
 
 But, often, the value 0.01 is used.
 
@@ -66,6 +66,13 @@ For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And
 
 The supporting functions can be taken from **scipy** library.
 
+## It is not shema drift.
+We're assuming here that the "schema" is the same for the two datasets.
 
+What are changing are the Statistical characteristics of some key features (or example, the mean has increased significantly).
 
+# The Wiki.
+In the Wiki you can find some more details regarding the implementation.
+
+THe Wiki is WIP, therefore you'll find enough details as soon as I have enough time to document them.
 
