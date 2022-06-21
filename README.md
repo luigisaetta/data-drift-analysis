@@ -76,6 +76,9 @@ We're assuming here that the "schema" is the same for the two datasets.
 
 What are changing are the Statistical characteristics of some key features (or example, the mean has increased significantly).
 
+# Conda environment.
+[Here](https://github.com/luigisaetta/data-drift-analysis/wiki/CONDA-Environments) you can find a list of the CONDA environments on which I have tested the code.
+
 ## The Wiki.
 In the Wiki you can find some more details regarding the implementation.
 
