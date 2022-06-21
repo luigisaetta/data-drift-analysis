@@ -29,7 +29,7 @@ In this repository I have collected some Python tools that can be used to rapidl
 ## Dynamical Models.
 A ML model shouldn't be considered a static thing. 
 
-From time to time, you should consider to option to re-train it on fresh data, in order to take into account the fact that data can change in time.
+From time to time, you should consider the option to re-train it on fresh data, in order to take into account the fact that data can change in time.
 
 To diagnose a Model Drift is more complicated, because you need the expected values (the ground truth) to test your predictions. But, at least, you can periodically check to see if there are signs of Data Drift.
 
@@ -94,5 +94,5 @@ You will find more details [here](https://github.com/luigisaetta/data-drift-anal
 ## The Wiki.
 In the Wiki you can find some more details regarding the implementation.
 
-THe Wiki is WIP, therefore you'll find enough details as soon as I have enough time to document them.
+The Wiki is WIP, therefore you'll find enough details as soon as I have enough time to document them.
 
