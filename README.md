@@ -1,5 +1,5 @@
 # Data Drift Analysis
-In this repo I have collected all te work done, starting from summer 2022, on tools to identify data drift
+In this repo I have collected all the work done, starting from Dummer 2022, on tools to identify Data Drift
 
 ## What is Data Drift?
 Let's imagine that we have a worderful dataset, and we want to develop a Machine Learning model that enable us to predict a target T,
@@ -51,6 +51,20 @@ But, often, the value 0.01 is used.
 Therefore, a quick recipe could be:
 
 if p_value < 0.01: "there is a drift"
+
+## Kind of tests used.
+In the dataset we have a set of features. Since we're only analyzing if there are signs of Data Drift, we don't need the values for the target T (the ground truth).
+
+We will need first to identify a set of features that we want to consider in our test. For example, after we have validated our model, we do a "Feature Importance" Analysis. Themìn, we can decide to consider, let's say, the first 10 most important features.
+
+We have then to make a difference between the **categorical features** and the **numerical (continuous)** features.
+
+For the **categorical features** we will compute, for each of the distinct values the occurrencies and the frequencies.
+Then, on top of this values, we can use a **Chi2 Test**.
+
+For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And, we will also compute the **Wasserman** distance.
+
+The supporting functions can be taken from **scipy** library.
 
 
 
