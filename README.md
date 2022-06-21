@@ -2,7 +2,7 @@
 In this repo I have collected all the work done, starting from Dummer 2022, on tools to identify Data Drift
 
 ## What is Data Drift?
-Let's imagine that we have a worderful dataset, and we want to develop a Machine Learning model that enable us to predict a target T,
+Let's imagine that we have a wonderful dataset, and we want to develop a Machine Learning model that enable us to predict a target T,
 giving the values for N features x1... xn.
 
 > We have a good dataset, we have enough data, we adopt a supervised approach. After some iterations (feature engineering, choice of the algorithm, hpo..)
