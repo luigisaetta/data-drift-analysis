@@ -10,7 +10,7 @@ we get good metrics (accuracy, f1-score, etc...) on the validation dataset and w
 The next step is that someone in your team puts the model in production, for example as a REST service, and it is used by some nice applications to make its predictions.
 Everyone, in your company is happy: it is a success story.
 
-But, after some time (months, years?) someone starts complaining that, having done some tests, **the predictions of your model are not as accurate as they were at the beginning**.
+> But, after some time (months, years?) someone starts complaining that, having done some tests, **the predictions of your model are not as accurate as they were at the beginning**.
 Performances (always measured on the above mentioned metrics) are starting to degradate.
 
 This is called **Model Drift**. 
