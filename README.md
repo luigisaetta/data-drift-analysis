@@ -1,5 +1,5 @@
 # Data Drift Analysis
-In this repo I have collected all the work done, starting from Dummer 2022, on tools to identify Data Drift
+In this repo I have collected all the work done, starting from Summer 2022, on tools to identify Data Drift
 
 ## What is Data Drift?
 Let's imagine that we have a wonderful dataset, and we want to develop a Machine Learning model that enable us to predict a target T,
