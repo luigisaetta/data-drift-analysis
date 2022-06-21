@@ -70,9 +70,11 @@ We will need first to identify a set of features that we want to consider in our
 We have then to make a difference between the **categorical features** and the **numerical (continuous)** features.
 
 For the **categorical features** we will compute, for each of the distinct values the occurrencies and the frequencies.
-Then, on top of this values, we can use a **Chi2 Test**.
+Then, on top of this values, we can use a [**Chi2 Test**](https://en.wikipedia.org/wiki/Chi-squared_test).
 
-For the **continuous features** we will use the **Kolmogorov-Smirnov** test. And, we will also compute the **Wasserstain** distance.
+For the **continuous features** we will use the [**Kolmogorov-Smirnov** test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test). 
+
+And, we will also compute the **Wasserstain** distance.
 
 The supporting functions can be taken from **scipy** library.
 
