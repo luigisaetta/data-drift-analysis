@@ -96,9 +96,9 @@ After you have trained your model, you should save it to the Data Science Model 
 
 For training your model, you have used a "reference" dataset, that has been splitted in train/validation/test. It is important to save this dataset, in order to have it as a "reference" to see if there is a Data Drift.
 
-Assuming that the dataset has been stored in the Object Storage, you can use Custom Metadata in Model Catalog to save, together with the Model, the URI of the reference dataset file.
+Assuming that the dataset has been stored in the Object Storage, you can use **Custom Metadata** in Model Catalog to save, together with the Model, the URI of the reference dataset file.
 
-To give a working idea of what can be realized, I have created some Notebook showing:
+To give a working idea of what can be realized, I have created some Notebooks showing:
 * how to store the model in the Catalog, together with the custom metadata "reference dataset"
 * how to retrieve the "reference dataset url" from the Model Catalog.
 
