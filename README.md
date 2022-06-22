@@ -2,11 +2,11 @@
 In this repo I have collected all the work done, starting from Summer 2022, on tools to identify Data Drift
 
 ## What is Data Drift?
-Let's imagine that we have a wonderful dataset, and we want to develop a Machine Learning model that enable us to predict a target T,
+Let's imagine that you have a wonderful dataset, and you want to develop a Machine Learning model that enable to predict a target T,
 giving the values for N features x1... xn.
 
-> We have a good dataset, we have enough data, we adopt a supervised approach. After some iterations (feature engineering, choice of the algorithm, hpo..)
-we get good metrics (accuracy, f1-score, etc...) on the validation dataset and we're happy.
+> You have a good dataset, enough data, and you adopt a supervised approach. After some iterations (feature engineering, choice of the algorithm, hpo..)
+you get good metrics (accuracy, f1-score, etc...) on the validation dataset and you're happy.
 The next step is that someone in your team puts the model in production, for example as a REST service, and it is used by some nice applications to make its predictions.
 Everyone, in your company is happy: it is a success story.
 
