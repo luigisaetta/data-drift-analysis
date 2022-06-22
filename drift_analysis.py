@@ -1,5 +1,12 @@
 import pandas as pd
 import numpy as np
+import os
+import tempfile
+
+# to save/load from Model Catalog
+from ads.catalog.model import ModelCatalog
+from ads.common.model_metadata import UseCaseType, MetadataCustomCategory
+from ads.model.generic_model import GenericModel
 
 from scipy.stats import ks_2samp, chisquare, chi2_contingency, gaussian_kde
 from scipy.stats import wasserstein_distance
@@ -213,3 +220,32 @@ def plot_comparison_categorical1(dfset1, dfset2, col):
     plt.grid(True)
     plt.show()
     
+#
+# get the reference dataset URL from Model Catalog
+#
+def get_reference_dataset_url(model_ocid):
+    KEY_REF_DS = "reference dataset"
+    
+    # load model from Model Catalog
+    # for reading custom metadata I can use GenericModel
+
+    # if you want to use the model, better to use a specific class (ex: SklearnModel) to avoid two access
+    gen_model = GenericModel.from_model_catalog(model_id=model_ocid,
+                                                # only for temporary use
+                                                model_file_name="gen_model.pkl",
+                                                artifact_dir=tempfile.mkdtemp())
+    
+    # take the custom metadata as Pandas df
+    meta_df = gen_model.metadata_custom.to_dataframe()
+    
+    # get only one row
+    condition = (meta_df['Key'] == KEY_REF_DS)
+    ref_ds_url_arr = meta_df.loc[condition]['Value']
+    
+    # it is a np array... take the only row
+    ref_url = None
+    # checck that it has found something
+    if (ref_ds_url_arr is not None) and (ref_ds_url_arr.shape[0] > 0):
+        ref_url = ref_ds_url_arr.values[0]
+        
+    return ref_url
