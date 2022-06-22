@@ -102,7 +102,7 @@ To give a working idea of what can be realized, I have created some Notebooks sh
 * how to store the model in the Catalog, together with the custom metadata "reference dataset"
 * how to retrieve the "reference dataset url" from the Model Catalog.
 
-In [this Notebook](https://github.com/luigisaetta/data-drift-analysis/blob/main/reference_dataset_from_model_catalog.ipynb) you will find a complete example that shos how to load the dataset starting from the custom metadata saved in the Model Catalog.
+In [this Notebook](https://github.com/luigisaetta/data-drift-analysis/blob/main/reference_dataset_from_model_catalog.ipynb) you will find a complete example showing how to load the dataset starting from the custom metadata saved in the Model Catalog.
 
 More details in the Wiki page dedicated.
 
