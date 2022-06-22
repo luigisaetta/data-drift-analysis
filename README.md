@@ -74,7 +74,7 @@ Then, on top of this values, we can use a [**Chi2 Test**](https://en.wikipedia.o
 
 For the **continuous features** we will use the [**Kolmogorov-Smirnov** test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test). 
 
-And, we will also compute the **Wasserstain** distance.
+And, we will also compute the [**Wasserstain**](https://en.wikipedia.org/wiki/Wasserstein_metric) distance.
 
 The supporting functions can be taken from **scipy** library.
 
@@ -87,7 +87,7 @@ What are changing are the Statistical characteristics of some key features (or e
 [Here](https://github.com/luigisaetta/data-drift-analysis/wiki/CONDA-Environments) you can find a list of the CONDA environments on which I have tested the code.
 
 ## JOBS and Data Drift Analysis in batch mode.
-The code I have posted in this repository can be used inside a Data Science JOB to do the analysis in batch mode and, therefore, can be included as part of a pipeline.
+The code posted here can be used inside a Data Science JOB to do the analysis in batch mode and, therefore, can be included as part of a **ML pipeline**.
 
 You will find more details [here](https://github.com/luigisaetta/data-drift-analysis/wiki/JOBS-for-Data-Drift-Analysis)
 
