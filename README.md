@@ -94,7 +94,7 @@ You will find more details [here](https://github.com/luigisaetta/data-drift-anal
 ## Using the Model Catalog.
 After you have trained your model, you should save it to the Data Science Model Catalog, using the [Model Serialization Framework](https://docs.oracle.com/en-us/iaas/tools/ads-sdk/latest/user_guide/model_serialization/index.html)
 
-For training your model, you have used a "reference" dataset, that has been splitted in train/validation/test. It is importante to save this dataset, in order to have it as a "reference" to see if there is a Data Drift.
+For training your model, you have used a "reference" dataset, that has been splitted in train/validation/test. It is important to save this dataset, in order to have it as a "reference" to see if there is a Data Drift.
 
 Assuming that the dataset has been stored in the Object Storage, you can use Custom Metadata in Model Catalog to save, together with the Model, the URI of the reference dataset file.
 
@@ -103,6 +103,8 @@ To give a working idea of what can be realized, I have created some Notebook sho
 * how to retrieve the "reference dataset url" from the Model Catalog.
 
 In [this Notebook](https://github.com/luigisaetta/data-drift-analysis/blob/main/reference_dataset_from_model_catalog.ipynb) you will find a complete example that shos how to load the dataset starting from the custom metadata saved in the Model Catalog.
+
+More details in the Wiki page dedicated.
 
 ## The Wiki.
 In the Wiki you can find some more details regarding the implementation.
