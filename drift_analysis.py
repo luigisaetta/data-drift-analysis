@@ -4,6 +4,9 @@ import numpy as np
 from scipy.stats import ks_2samp, chisquare, chi2_contingency, gaussian_kde
 from scipy.stats import wasserstein_distance
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 #
 # if we want eclude some columns (ex: target, we can use exc_list)
 #
@@ -145,3 +148,68 @@ def identify_data_drift(df_ref, df_new, p_thr=0.01, do_print=True, exc_list=[]):
             print()
         
     return list_drifts
+
+#
+# functions for plotting
+#
+
+# make a plot to compare the two distribution
+# only for numerical
+def plot_comparison_numeric(dfset1, dfset2, col):
+    df1_dict= {col: list(dfset1[col].values)}
+    df1 = pd.DataFrame(df1_dict)
+
+    df2_dict= {col: list(dfset2[col].values)}
+    df2 = pd.DataFrame(df2_dict)
+
+    df12 = pd.concat([df1.assign(dataset='set1'), df2.assign(dataset='set2')], ignore_index=True)
+    
+    plt.figure(figsize=(9,6))
+    plt.title(f"Distribution comparison for {col}")
+    sns.histplot(data=df12, x=col, hue="dataset", kde=True)
+    plt.grid(True)
+    plt.show();
+    
+def plot_comparison_categorical2(dfset1, dfset2, col):
+    # compute the contingency table
+    c_table, index = compute_contingency_table(dfset1[col], dfset2[col])
+    
+    # occ set1
+    occ1 = c_table[0, 0, :]
+    # set2
+    occ2 = c_table[1, 0, :]
+    
+    ROWS = 1
+    COLS = 2
+    
+    plt.figure(figsize=(12, 6))
+    for i, occ in enumerate([occ1, occ2]):
+        plt.subplot(ROWS, COLS, i+1)
+        plt.title(f"Distribution for set{i+1}")
+        sns.barplot(x=index, y=occ, color="r")
+        plt.grid(True)
+    plt.show()
+    
+def plot_comparison_categorical1(dfset1, dfset2, col):
+    # compute the contingency table
+    c_table, index = compute_contingency_table(dfset1[col], dfset2[col])
+    
+    # occ set1
+    occ1 = c_table[0, 0, :]
+    # set2
+    occ2 = c_table[1, 0, :]
+    
+    # create a dataframe with two columns
+    dict_df = {"set1" : list(occ1), "set2" : list(occ2)}
+    
+    # add index
+    df_data = pd.DataFrame(dict_df, index=index)
+    
+    ax = df_data.plot.bar(rot=30, 
+                          # color=['green', 'blue'], 
+                          figsize=(9, 6),
+                         title=f"Distribution comparison for {col}")
+    
+    plt.grid(True)
+    plt.show()
+    
